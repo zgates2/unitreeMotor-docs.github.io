@@ -55,6 +55,29 @@ sort: 1
         <td>
             ID
         </td>
+        <td>
+            0,1,2,3 … 13,14<br>
+            15.保留
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            20-22<br>
+            [3bit]
+        </td>
+        <td>
+            STATUS
+        </td>
+        <td>
+            电机工作模式
+        </td>
+        <td>
+            0.锁定(Default)<br>
+            1.FOC闭环<br>
+            2.编码器校准<br>
+            3-7.保留
+        </td>
     </tr>
 </table>
 
