@@ -31,6 +31,16 @@ sort: 1
             0-15
             (2Byte)
         </td>
+        <td>
+            HEAD
+        </td>
+        <td>
+            数据包头部
+        </td>
+        <td>
+            0xFD 0xEE
+            注意:与来自主机方向的包头不同
+        </td>
     </tr>
 
     <tr>
