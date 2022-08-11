@@ -171,7 +171,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
         </td>
     </tr>
 
-     <tr>
+    <tr>
         <td>
             104-119<br>
             （2Byte）
