@@ -188,5 +188,25 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
         </td>
     </tr>
 
+    <tr>
+        <td>
+            校验部分<br>
+            （2Byte）
+        </td>
+        <td>
+            120-135<br>
+            （2Byte）
+        </td>
+        <td>
+            CRC16
+        </td>
+        <td>
+           CRC16校验结果
+        </td>
+        <td>
+           CRC16_CCITT多项式计算0-199位数据的结果
+        </td>
+    </tr>
+
 </table>
 
