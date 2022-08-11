@@ -45,7 +45,7 @@ sort: 1
 
     <tr>
         <td rowspan="3">
-            模式信息<br>
+            模式设置<br>
             (1Byte)
         </td>
         <td>
@@ -86,11 +86,32 @@ sort: 1
     <tr>
         <td>
             23<br>
-            （3bit）
+            （1bit）
         </td>
         <td colspan="3">
             保留
         </td>
     </tr>
+
+    <tr>
+        <td rowspan="7">
+            控制参数<br>
+            (12byte)
+        </td>
+        <td>
+            24-39<br>
+            （2Byte）
+        </td>
+        <td>
+            t_set
+        </td>
+        <td>
+            期望电机转矩
+        </td>
+        <td>
+            期望电机转矩
+        </td>
+    </tr>
+
 </table>
 
