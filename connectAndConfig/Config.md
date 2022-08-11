@@ -3,6 +3,8 @@ sort: 2
 ---
 
 ## 相关配置
+&emsp;&emsp;宇树提供了电机工具箱`Unitree MotorTools`让用户可以更方便地进行配置工作，如更改ID、电机固件升级等。解压 Unitree MotorTools工具箱，进入bin文件夹后可以看到一些可执行程序，这里提供了常见的一些对电机修改的工具。
+
 ### 查看串口名
 &emsp;&emsp;将USB转RS-485转接口连接在上位机上时，上位机会为这个串口分配一个串口名。在Linux系统中，这个串口名一般是以“ttyUSB”开头，在Windows系统中，串口名往往以“COM”开头。
 &emsp;&emsp;在Linux系统中，一切外接设备都是以文件形式存在的。USB转RS-485转接器也可以被视为/dev文件夹下的一个“文件”。打开任意一个终端窗口（在Ubuntu下快捷键为Ctrl+Alt+t组合键），运行如下命令：
