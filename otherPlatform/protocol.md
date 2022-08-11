@@ -160,7 +160,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             （2Byte）
         </td>
         <td>
-            $theta_set$
+            $$K_{pos}$$
         </td>
         <td>
             电机刚度系数/
@@ -177,7 +177,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             （2Byte）
         </td>
         <td>
-            $theta_set$
+            $$K_{spd}$$
         </td>
         <td>
             电机阻尼系数/
