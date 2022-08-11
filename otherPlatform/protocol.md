@@ -96,7 +96,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
     </tr>
 
     <tr>
-        <td rowspan="7">
+        <td rowspan="5">
             控制参数<br>
             (12byte)
         </td>
