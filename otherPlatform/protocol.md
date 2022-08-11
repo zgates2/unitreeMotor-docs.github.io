@@ -50,10 +50,13 @@ sort: 1
         </td>
         <td>
             16-19<br>
-            [4bit]
+            （4bit）
         </td>
         <td>
             ID
+        </td>
+        <td>
+            目标电机ID
         </td>
         <td>
             0,1,2,3 … 13,14<br>
@@ -64,7 +67,7 @@ sort: 1
     <tr>
         <td>
             20-22<br>
-            [3bit]
+            （3bit）
         </td>
         <td>
             STATUS
@@ -77,6 +80,16 @@ sort: 1
             1.FOC闭环<br>
             2.编码器校准<br>
             3-7.保留
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            23<br>
+            （3bit）
+        </td>
+        <td colspan="3">
+            保留
         </td>
     </tr>
 </table>
