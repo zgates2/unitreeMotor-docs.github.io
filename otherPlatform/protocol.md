@@ -44,7 +44,17 @@ sort: 1
     </tr>
 
     <tr>
-        <td colspan="2">合并第二行</td>
+        <td rowspan="3">
+            模式信息<br>
+            (1Byte)
+        </td>
+        <td>
+            16-19<br>
+            [4bit]
+        </td>
+        <td>
+            ID
+        </td>
     </tr>
 </table>
 
