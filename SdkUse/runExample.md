@@ -1,0 +1,55 @@
+---
+sort: 1
+---
+SDK 目前支持以下平台和系统：
+    1. x86/x64平台下Linux 系统
+在每一个支持下，都提供 C++的代码示例，用户只需要仿照示例 就能完成对电机的控制。下面我们以 Linux 系统为例， 演示如何控制电机。
+```note
+如果需要在ARM32/ARM64平台下的Linux 系统中使用SDK，请联系技术支持
+```
+## C++ 范例试运行
+&emsp;&emsp;下面我们尝试让电机转起来。
+首先打开src文件夹下的main.cpp文件，第一步要做的就是修改串口名。如果只在一个系统下运行，那么只修改这一系统下的串口名即可：
+```
+SerialPort _ioPort("/dev/ttyUSB0");
+```
+接下来是声明发送给电机的命令和从电机接收回来的状态：
+```
+MotorCmd cmd;
+MotorData data; 
+```
+&emsp;&emsp;其中cmd是给电机发送的控制命令包，它们都是MotorCmd类型的结构体。所谓结构体，即包含了许多不同类型数据的数据包，我们马上就会展示针对结构体的操作。同理data是接收电机状态信息的数据包，它是一个MotorData类型的结构体。关于这两个结构体的具体内容，可以参考include/unitreeMotor/unitreeMotor.h文件，在此不再赘述。
+&emsp;&emsp;接下来我们修改cmd。首先解释一下MotorCmd类型结构体包含的数据：
+1. `Id`：当前控制命令的目标电机ID；
+2. `mode`: 目标电机运行模式。 0.停止 1.FOC 2.电机标定；
+3. `T`: 前馈力矩: 
+4. `W`: 指定角速度；
+5. `Pos`: 指定角度位置；
+6. `K_P`: 位置刚度；
+7. `K_W`: 速度刚度（阻尼）。
+&emsp;&emsp;当mode的值为0时，后面的5个控制参数并没有任何作用。当mode的值为2时，表示进行电机标定。在这个例子中我们将mode的值设为1。这里我们让电机以恒定的速度旋转，完整的代码为：
+```
+cmd.motorType = MotorType::Go2;
+cmd.id = 0;
+cmd.mode = 1;
+cmd.K_P = 0;
+cmd.W = 6.28*6.33;
+cmd.K_W = 0.02;
+cmd.T = 0.0;
+_ioPort.sendRecv(&cmd,&data);
+```
+下面我们就可以给电机发送命令了，控制命令会通过_ioPort对象的sendRecv(&cmd,&data)函数给电机发送一次控制命令，并接收一次电机的当前状态信息。
+
+```note
+此处需要特别注意的是，给电机发送的命令都是针对减速器之前的电机转子，即图5中的转轴1。而不是经过减速之后的输出轴2。所以在进行实际控制的过程中，一定要注意考虑电机的减速比。在GO-8010-6的电机中，减速比为`6.33`。
+```
+
+<center>
+<img src="../img/outPut.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">电机输出端</div>
+</center>
+<br>
