@@ -24,6 +24,22 @@ cd /dev
 ls | grep ttyUSB
 ```
 &emsp;&emsp;其中cd /dev命令将当前文件夹切换为/dev， ls |grep ttyUSB命令显示当前文件夹下所有文件名包含ttyUSB的文件，其中的 | 符号就在键盘的回车键上方，按住Shift+\即可键入”|”字符。运行如上命令后，即可得到上位机当前连接的串口名。例如图3所示，当前上位机连接的串口名为ttyUSB0。考虑到串口所在的文件夹路径，其完整的串口名为/dev/ttyUSB0。
+<center>
+<img src="./img/check_SerialPort.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">Ubuntu系统查看串口名</div>
+</center>
+<br>
 ```note
 串口名的序号和插入设备的顺序一致，对于连接多个设备这很有帮助。
 ```
+
+### 查看电机ID
+&emsp;&emsp;查看和修改电机ID需要将电机切换到工厂模式，切换前请确保所有电机已经停止工作，主机也不再向电机发送运动控制指令。
+```
+sudo ./swboot /dev/ttyUSB
+```
+稍等片刻，进入工厂模式的电机背部绿色指示灯会变成每秒快速闪烁3次的状态，此时终端上会显示所有已经进入工厂模式的电机。
