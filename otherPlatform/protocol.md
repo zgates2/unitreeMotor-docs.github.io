@@ -14,17 +14,17 @@ sort: 1
 &emsp;&emsp;如果数据传输过程中没有发生任何错误，那么发送前CRC校验值等于发送后CRC校验值。如果在数据传输过程中出现了数据错误，那么发送后CRC校验值的计算结果就与发送前CRC校验值不相等，电机就能够知道数据发生了损坏，从而帮助我们避免错误数据。读者可以直接参考Linux内核中关于crc_ccitt函数的源码
 
 <table>
-<tr>
-<td>第一列</td>
-<td>第二列</td>
-</tr>
+    <tr>
+        <td>第一列</td>
+        <td>第二列</td>
+    </tr>
 
-<tr>
-    <td colspan="2">合并第一行</td>
-</tr>
+    <tr>
+        <td colspan="2">合并第一行</td>
+    </tr>
 
-<tr>
-    <td colspan="2">合并第二行</td>
-</tr>
+    <tr>
+        <td colspan="2">合并第二行</td>
+    </tr>
 </table>
 
