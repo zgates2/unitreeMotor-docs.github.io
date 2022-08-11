@@ -43,3 +43,67 @@ padding: 1px;">Ubuntu系统查看串口名</div>
 sudo ./swboot /dev/ttyUSB
 ```
 稍等片刻，进入工厂模式的电机背部绿色指示灯会变成每秒快速闪烁3次的状态，此时终端上会显示所有已经进入工厂模式的电机。
+<center>
+<img src="../img/checkMotorID.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">查看电机ID</div>
+</center>
+<br>
+&emsp;&emsp;正常情况，打印的列表中不会有ID大于15的电机。如果这发生了请重新给电机上电再试一次。
+如果存在ID为15的电机，则说明该电机还没有设置ID，您可以参照6.4配置。
+
+### 更改电机ID
+要修改电机的ID需要使用 changeid 命令，用法为：
+
+changeid [串口号] [原来的ID] [要修改的ID]
+changeid /dev/ttyUSB0 0 1  :设置电机ID0为ID1
+
+切换前请确保所有电机已经停止工作，主机也不再向电机发送运动控制指令。
+
+例如：将总线上所有ID为15的电机修改为ID 0
+
+```
+sudo ./changed /dev/ttyUSB0 15 0
+```
+<center>
+<img src="../img/checkMotorID.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">更改电机ID</div>
+</center>
+<br>
+
+### 电机固件升级
+&emsp;&emsp;Go-M8010-6电机支持升级电机固件，方便后期提高电机性能和安全修复，您可以将宇树科技提供给您的固件文件使用 unisp 工具下载到电机中。要升级电机固件需要使用 unisp命令，用法为：
+unisp [串口号] [.bin升级文件] [要刷入的电机ID]
+unisp /dev/ttyUSB0 ./GoM80106_v1.0.bin 0
+<center>
+<img src="../img/UpdateISP.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">升级电机ISP</div>
+</center>
+<br>
+```note
+请不要给电机下载来历不明的电机固件，这是非常危险的行为。
+风险不仅限于电机变砖、意外伤人、烧毁电机、丧失质保等等
+```
+
+### 切换回电机模式
+查看和修改电机ID会让电机切换到工厂模式，如果不手动切换回电机模式，即使给电机重新上电也还会进入工厂模式。
+进入工厂模式的电机背部绿色指示灯会变成每秒快速闪烁3次的状态。
+此时使用命令 ./swmotor 即可切换到电机模式，用法为：
+swmotor [串口号]
+swmotor /dev/ttyUSB0
+即可让该RS485总线上所有的电机切换到电机模式，此时电机就可以接收运动控制指令了。
+
+```note
+没有固件的电机不会被启动，并且会在终端上显示。
+```
