@@ -15,12 +15,22 @@ sort: 1
 
 <table>
     <tr>
-        <td>第一列</td>
-        <td>第二列</td>
+        <td>类型(type)</td>
+        <td>位(bit)</td>
+        <td>符号</td>
+        <td>说明</td>
+        <td>Value</td>
     </tr>
 
     <tr>
-        <td colspan="2">合并第一行</td>
+        <td>
+            包头
+            (2Byte)
+        </td>
+        <td>
+            0-15
+            (2Byte)
+        </td>
     </tr>
 
     <tr>
