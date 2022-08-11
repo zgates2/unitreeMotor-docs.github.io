@@ -103,7 +103,7 @@ sort: 1
             （2Byte）
         </td>
         <td>
-            $t_set$
+            $$\tau_set$$
         </td>
         <td>
             期望电机转矩
@@ -125,7 +125,7 @@ sort: 1
             期望电机速度
         </td>
         <td>
-           $$t_ff = 0.75(N*m)$$
+           $$\tau_ff = 0.75(N*m)$$
         </td>
     </tr>
 
