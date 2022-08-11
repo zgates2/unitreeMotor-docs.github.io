@@ -112,7 +112,7 @@ sort: 1
             例：
             $$t_{ff} = 0.75(N*m)$$ <br>
             $$\tau_{set} = t_{ff} *256 = 0.75*256 =192 $$ <br>
-            $$\lvert t_{ff} < 127.99N*m $$
+            $$注：\lvert t_{ff} \rvert <= 127.99N*m $$
         </td>
     </tr>
 
@@ -122,13 +122,16 @@ sort: 1
             （2Byte）
         </td>
         <td>
-            $w_set$
+            $\omega_{set}$
         </td>
         <td>
             期望电机速度
         </td>
         <td>
-           $$\tau_ff = 0.75(N*m)$$
+           $$\omega_{des} = 90 = \pi/2(rad/s)$$ <br>
+           $$\omega_{set} = \omega_{des}/2 \pi * 256 = 128$$ <br>
+           $$注：2\pi = 6.28rad/s = 60PRM$$ <br>
+           $$\lvert \omega_{des} <=804.0rad/s \rvert $$ 
         </td>
     </tr>
 
