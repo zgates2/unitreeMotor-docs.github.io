@@ -69,7 +69,7 @@ changeid [串口号] [原来的ID] [要修改的ID]<br>
 sudo ./changed /dev/ttyUSB0 15 0
 ```
 <center>
-<img src="../img/checkMotorID.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/ChangeId.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
