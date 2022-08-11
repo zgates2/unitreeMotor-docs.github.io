@@ -24,11 +24,11 @@ sort: 1
 
     <tr>
         <td>
-            包头
+            包头<br>
             (2Byte)
         </td>
         <td>
-            0-15
+            0-15<br>
             (2Byte)
         </td>
         <td>
@@ -38,7 +38,7 @@ sort: 1
             数据包头部
         </td>
         <td>
-            0xFD 0xEE
+            0xFD 0xEE<br>
             注意:与来自主机方向的包头不同
         </td>
     </tr>
