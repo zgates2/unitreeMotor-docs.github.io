@@ -103,13 +103,79 @@ sort: 1
             （2Byte）
         </td>
         <td>
-            t_set
+            $t_set$
         </td>
         <td>
             期望电机转矩
         </td>
         <td>
-            期望电机转矩
+           $t_ff = 0.75(N*m)$
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            40-55<br>
+            （2Byte）
+        </td>
+        <td>
+            $w_set$
+        </td>
+        <td>
+            期望电机速度
+        </td>
+        <td>
+           $t_ff = 0.75(N*m)$
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            56-87<br>
+            （4Byte）
+        </td>
+        <td>
+            $theta_set$
+        </td>
+        <td>
+            期望电机输出位置(多圈累加)
+        </td>
+        <td>
+           $t_ff = 0.75(N*m)$
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            88-103<br>
+            （2Byte）
+        </td>
+        <td>
+            $theta_set$
+        </td>
+        <td>
+            电机刚度系数/
+            位置误差比例系数(多圈累加)
+        </td>
+        <td>
+           $t_ff = 0.75(N*m)$
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            104-119<br>
+            （2Byte）
+        </td>
+        <td>
+            $theta_set$
+        </td>
+        <td>
+            电机阻尼系数/
+            速度误差比例系数
+        </td>
+        <td>
+           $t_ff = 0.75(N*m)$
         </td>
     </tr>
 
