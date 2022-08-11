@@ -5,7 +5,7 @@ sort: 2
 ## 相关配置
 &emsp;&emsp;宇树提供了电机工具箱`Unitree MotorTools`让用户可以更方便地进行配置工作，如更改ID、电机固件升级等。解压 Unitree MotorTools工具箱，进入bin文件夹后可以看到一些可执行程序，这里提供了常见的一些对电机修改的工具。
 <center>
-<img src="./img/unitree_motortools.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/unitree_motortools.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -25,7 +25,7 @@ ls | grep ttyUSB
 ```
 &emsp;&emsp;其中cd /dev命令将当前文件夹切换为/dev， ls |grep ttyUSB命令显示当前文件夹下所有文件名包含ttyUSB的文件，其中的 | 符号就在键盘的回车键上方，按住Shift+\即可键入”|”字符。运行如上命令后，即可得到上位机当前连接的串口名。例如图3所示，当前上位机连接的串口名为ttyUSB0。考虑到串口所在的文件夹路径，其完整的串口名为/dev/ttyUSB0。
 <center>
-<img src="./img/check_SerialPort.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/check_SerialPort.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
