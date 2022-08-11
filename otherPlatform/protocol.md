@@ -208,5 +208,14 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
         </td>
     </tr>
 
+      <tr>
+        <td>
+            共计：
+        </td>
+        <td colspan="4">
+            17 Byte
+        </td>
+    </tr>
+
 </table>
 
