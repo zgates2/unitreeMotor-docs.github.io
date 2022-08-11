@@ -58,8 +58,8 @@ padding: 1px;">查看电机ID</div>
 ### 更改电机ID
 要修改电机的ID需要使用 changeid 命令，用法为：
 
-changeid [串口号] [原来的ID] [要修改的ID]
-changeid /dev/ttyUSB0 0 1  :设置电机ID0为ID1
+changeid [串口号] [原来的ID] [要修改的ID]<br>
+例：changeid /dev/ttyUSB0 0 1  :设置电机ID0为ID1
 
 切换前请确保所有电机已经停止工作，主机也不再向电机发送运动控制指令。
 
@@ -79,9 +79,9 @@ padding: 1px;">更改电机ID</div>
 <br>
 
 ### 电机固件升级
-&emsp;&emsp;Go-M8010-6电机支持升级电机固件，方便后期提高电机性能和安全修复，您可以将宇树科技提供给您的固件文件使用 unisp 工具下载到电机中。要升级电机固件需要使用 unisp命令，用法为：
-unisp [串口号] [.bin升级文件] [要刷入的电机ID]
-unisp /dev/ttyUSB0 ./GoM80106_v1.0.bin 0
+&emsp;&emsp;Go-M8010-6电机支持升级电机固件，方便后期提高电机性能和安全修复，您可以将宇树科技提供给您的固件文件使用 unisp 工具下载到电机中。要升级电机固件需要使用 unisp命令，用法为：<br>
+unisp [串口号] [.bin升级文件] [要刷入的电机ID] <br>
+例：unisp /dev/ttyUSB0 ./GoM80106_v1.0.bin 0
 <center>
 <img src="../img/UpdateISP.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
@@ -97,11 +97,11 @@ padding: 1px;">升级电机ISP</div>
 ```
 
 ### 切换回电机模式
-查看和修改电机ID会让电机切换到工厂模式，如果不手动切换回电机模式，即使给电机重新上电也还会进入工厂模式。
-进入工厂模式的电机背部绿色指示灯会变成每秒快速闪烁3次的状态。
-此时使用命令 ./swmotor 即可切换到电机模式，用法为：
-swmotor [串口号]
-swmotor /dev/ttyUSB0
+&emsp;&emsp;查看和修改电机ID会让电机切换到工厂模式，如果不手动切换回电机模式，即使给电机重新上电也还会进入工厂模式。
+&emsp;&emsp;进入工厂模式的电机背部绿色指示灯会变成每秒快速闪烁3次的状态。
+此时使用命令 ./swmotor 即可切换到电机模式，用法为：<br>
+swmotor [串口号]<br>
+例：swmotor /dev/ttyUSB0<br>
 即可让该RS485总线上所有的电机切换到电机模式，此时电机就可以接收运动控制指令了。
 
 ```note
