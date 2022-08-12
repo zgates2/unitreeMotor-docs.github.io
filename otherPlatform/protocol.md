@@ -219,7 +219,12 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
     </tr>
 
 </table>
-
+<center>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">主机侧控制协议</div>
+</center>
 
 
 <table>
@@ -453,8 +458,22 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
         <td>
             共计:
         </td>
-        <td clospan="4">
+        <td colspan="4">
             16 Byte
         </td>
     </tr>
 </table>
+<center>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">电机端反馈数据</div>
+</center>
+```note
+通讯协议内所有的数据类型都为整形，具体大小请参照上表“位(bit)”项描述。
+请确保控制主机处理器平台为小端(LSB)模式。
+```
+```note
+没有特殊说明，表中参数都为关节电机的电机转子侧，而非输出端。
+	Go-M8010-6电机转子到输出端的传动减速比为: `6.33`
+```
