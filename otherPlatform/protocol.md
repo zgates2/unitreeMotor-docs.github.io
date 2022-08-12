@@ -311,4 +311,150 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             保留
         </td>
     </tr>
+
+    <tr>
+        <td rowspan="7">
+            反馈数据<br>
+            （11Byte）
+        </td>
+        <td>
+            24-39<br>
+            (2Byte)
+        </td>
+        <td>
+            $$\tau_{fbk}$$
+        </td>
+        <td>
+            实际关节输出转矩
+        </td>
+        <td>
+            $$\tau(N*m) = \frac{\tau_{fbk}}{256}$$
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            40-55<br>
+            (2Byte)
+        </td>
+        <td>
+            $$\omega_{fbk}$$
+        </td>
+        <td>
+            实际关节输出速度
+        </td>
+        <td>
+            $$\omega(rad/s) = \frac{\omega_{fbk}}{256}*2\pi$$
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            56-87<br>
+            (4Byte)
+        </td>
+        <td>
+            $$\theta_{fbk}$$
+        </td>
+        <td>
+            实际关节输出位置(多圈累加)
+        </td>
+        <td>
+            $$\theta(rad) = \frac{\theta_{fbk}}{32768}*2\pi$$
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            88-95<br>
+            (1Byte)
+        </td>
+        <td>
+            TEMP
+        </td>
+        <td>
+            电机温度
+        </td>
+        <td>
+            unit: 摄氏度 (int8_t)<br>
+            -128~127°C，90℃时触发温度保护，需要电机重新上电后才能控制。
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            96-98<br>
+            [3bit]
+        </td>
+        <td>
+            MERROR
+        </td>
+        <td>
+            电机错误标识
+        </td>
+        <td>
+            0.正常<br>
+            1.过热<br>
+            2.过流<br>
+            3.过压<br>
+            4.编码器故障<br>
+            5-7.保留
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            99-110<br>
+            [12bit]
+        </td>
+        <td>
+            FORCE
+        </td>
+        <td>
+            足端力
+        </td>
+        <td>
+            12bit 原始数据  (0-4095)<br>
+            物理量单位/范围，待确认
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            111<br>
+            [1bit]
+        </td>
+        <td colspan="3">
+            保留
+        </td>
+    </tr>
+
+     <tr>
+        <td>
+            校验部分<br>
+            (2Byte)
+        </td>
+        <td>
+            112-127<br>
+            (2Byte)
+        </td>
+        <td>
+            CRC16
+        </td>
+        <td>
+            CRC16校验结果
+        </td>
+        <td>
+            CRC16_CCITT多项式计算<br>0-111位数据的结果
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            共计:
+        </td>
+        <td clospan="4">
+            16 Byte
+        </td>
+    </tr>
 </table>
