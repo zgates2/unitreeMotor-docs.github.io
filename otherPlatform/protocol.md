@@ -152,9 +152,9 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
         </td>
         <td>
            例：
-           $$\theta_{des} = 90&deg = \frac{\pi}{2} = 1.57(rad)$$<br>
+           $$\theta_{des} = 90&deg; = \frac{\pi}{2} = 1.57(rad)$$<br>
            $$\theta_{set} = \frac{\theta_{des}}{2\pi} * 32768 = 8187$$<br>
-           $$注：2\pi = 360&deg = 6.2831rad$$<br>
+           $$注：2\pi = 360&deg; = 6.2831rad$$<br>
            $$\lvert \theta_{des} \rvert \leqslant 411774rad(65535圈)$$
         </td>
     </tr>
