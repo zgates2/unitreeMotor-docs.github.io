@@ -223,9 +223,14 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
 color: #999;
-padding: 1px;">主机侧控制协议</div>
+padding: 1px;">表1 主机侧控制协议</div>
 </center>
-
+```note
+为了保证标定效果，切换到编码器校准模式后，需要等待5s再进行通信
+（期间不可以给电机发送任何数据包，否则会标定失败)
+```
+<br>
+<br>
 
 <table>
     <tr>
@@ -467,7 +472,7 @@ padding: 1px;">主机侧控制协议</div>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
 color: #999;
-padding: 1px;">电机端反馈数据</div>
+padding: 1px;">表2 电机端反馈数据</div>
 </center>
 ```note
 通讯协议内所有的数据类型都为整形，具体大小请参照上表“位(bit)”项描述。
