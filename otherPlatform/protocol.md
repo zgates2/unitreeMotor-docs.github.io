@@ -115,7 +115,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             例：
             $$t_{ff} = 0.75(N*m)$$ <br>
             $$\tau_{set} = t_{ff} *256 = 0.75*256 =192 $$ <br>
-            $$注：\lvert t_{ff} \rvert <= 127.99N*m $$
+            $$注：\lvert t_{ff} \rvert \leqslant 127.99N*m $$
         </td>
     </tr>
 
@@ -135,7 +135,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
            $$\omega_{des} = 90 = \pi/2(rad/s)$$ <br>
            $$\omega_{set} = \omega_{des}/2 \pi * 256 = 128$$ <br>
            $$注：2\pi = 6.28rad/s = 60PRM$$ <br>
-           $$\lvert \omega_{des} <=804.0rad/s \rvert $$ 
+           $$\lvert \omega_{des} \leqslant 804.0rad/s \rvert $$ 
         </td>
     </tr>
 
