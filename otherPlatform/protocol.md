@@ -115,7 +115,7 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             例：
             $$t_{ff} = 0.75(N*m)$$ <br>
             $$\tau_{set} = t_{ff} *256 = 0.75*256 =192 $$ <br>
-            $$注：\lvert t_{ff} \rvert \leqslant 127.99N*m $$
+            $$注：\lvert t_{ff} \rvert \leqslant 127.99N \bullet m $$
         </td>
     </tr>
 
@@ -151,7 +151,11 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             期望电机输出位置(多圈累加)
         </td>
         <td>
-           $t_ff = 0.75(N*m)$
+           例：
+           $$\theta_{des} = \degree{90} = \frac{\pi}{2} = 1.57(rad)$$<br>
+           $$\theta_{set} = \frac{\theta_{des}}{2\pi} * 32768 = 8187$$<br>
+           $$注：2\pi = \degree{360} = 6.2831rad$$<br>
+           $$\lvert \theta_{des} \leqslant 411774rad(65535圈)$$
         </td>
     </tr>
 
@@ -168,7 +172,10 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             位置误差比例系数(多圈累加)
         </td>
         <td>
-           $t_ff = 0.75(N*m)$
+           例：
+           $$k_p = 0.1$$<br>
+           $$k_{pos} = k_p * 1280 = 128$$<br>
+           $$注：0 \geqslant k_p \leqslant 25.599$$
         </td>
     </tr>
 
@@ -185,7 +192,10 @@ $$ \lvert \tau_{ff} \rvert<  \frac{2^{15}}{256} = 128 $$
             速度误差比例系数
         </td>
         <td>
-           $t_ff = 0.75(N*m)$
+           例：
+           $$k_w = 0.2$$<br>
+           $$k_{spd} = k_w*1280 = 256$$<br>
+           $$注：0 \geqslant k_w \leqslant 25.599$$
         </td>
     </tr>
 
