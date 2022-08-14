@@ -63,7 +63,15 @@ padding: 1px;">线路连接图</div>
 <br>
 &emsp;&emsp;如上图所示。提供给用户的接口使用C（XT30(2+2)线缆），连接至B （XT30(2+2)转接板），并通过D（GH1.25-3线缆）连接到A(485转USB模块)并连接到电脑上。<br>
 &emsp;&emsp;在通过自己的电脑控制电机时，为了将指令从上位机发送到电机，需要将RS-485 接口通过USB转 RS-485 转接口连接到上位机。在接通24V直流电源后，电机绿色指示灯开始闪烁，说明电机已开机。 
-
+<center>
+<img src="../img/go_start.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">绿灯闪烁，电机开机</div>
+</center>
+<br>
 ```warning
 请在上电前检查供电电源，请勿让供电电源高于30V ，并检查电源供电能力是否充足。
 ```
