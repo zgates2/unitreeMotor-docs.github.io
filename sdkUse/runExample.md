@@ -29,7 +29,7 @@ cmd.id = 0;
 cmd.mode = 1;
 cmd.K_P = 0;
 cmd.W = 6.28*6.33;
-cmd.K_W = 0.02;
+cmd.K_W = 0.001;
 cmd.T = 0.0;
 _ioPort.sendRecv(&cmd,&data);
 ```
