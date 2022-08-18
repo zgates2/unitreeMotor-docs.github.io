@@ -9,3 +9,6 @@ SDK 目前支持以下平台和系统：
 ```note
 如果需要在ARM32/ARM64平台下的Linux 系统中使用SDK，请联系技术支持
 ```
+```note
+SDK下载地址为[UnitreeMotorSDK_M80106](https://github.com/OnlineMC/UnitreeMotorSDK_M80106)
+```
