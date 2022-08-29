@@ -101,7 +101,7 @@ padding: 1px;">升级电机ISP</div>
 &emsp;&emsp;进入工厂模式的电机背部绿色指示灯会变成每秒快速闪烁3次的状态。
 此时使用命令 ./swmotor 即可切换到电机模式，用法为：<br>
 swmotor [串口号]<br>
-例：swmotor /dev/ttyUSB0<br>
+例：sudo ./swmotor /dev/ttyUSB0<br>
 即可让该RS485总线上所有的电机切换到电机模式，此时电机就可以接收运动控制指令了。
 
 ```note
