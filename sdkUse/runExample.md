@@ -22,7 +22,8 @@ MotorData data;
 4. `W`: 指定角速度$$\omega_{des}$$
 5. `Pos`: 指定角度位置$$K_{des}$$
 6. `K_P`: 位置刚度$$K_p$$
-7. `K_W`: 速度刚度（阻尼)$$K_d$$<br>
+7. `K_W`: 速度刚度(阻尼)$$K_d$$<br>
+
 &emsp;&emsp;当mode的值为0时，后面的5个控制参数并没有任何作用。当mode的值为2时，表示进行电机标定。在这个例子中我们将mode的值设为1。这里我们让电机以恒定的速度旋转，完整的代码为：
 ```
 cmd.motorType = MotorType::Go2;
