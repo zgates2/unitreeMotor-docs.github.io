@@ -14,7 +14,7 @@ SerialPort _ioPort("/dev/ttyUSB0");
 MotorCmd cmd;
 MotorData data; 
 ```
-&emsp;&emsp;其中cmd是给电机发送的控制命令包，它们都是MotorCmd类型的结构体。所谓结构体，即包含了许多不同类型数据的数据包，我们马上就会展示针对结构体的操作。同理data是接收电机状态信息的数据包，它是一个MotorData类型的结构体。关于这两个结构体的具体内容，可以参考include/unitreeMotor/unitreeMotor.h文件，在此不再赘述。
+&emsp;&emsp;其中cmd是给电机发送的控制命令包，它们都是MotorCmd类型的结构体。所谓结构体，即包含了许多不同类型数据的数据包，我们马上就会展示针对结构体的操作。同理data是接收电机状态信息的数据包，它是一个MotorData类型的结构体。关于这两个结构体的具体内容，可以参考include/unitreeMotor/unitreeMotor.h文件，在此不再赘述。<br>
 &emsp;&emsp;接下来我们修改cmd。首先解释一下MotorCmd类型结构体包含的数据：
 1. `Id`：当前控制命令的目标电机ID
 2. `mode`: 目标电机运行模式。 0.停止 1.FOC 2.电机标定
