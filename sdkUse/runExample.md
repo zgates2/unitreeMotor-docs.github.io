@@ -3,6 +3,7 @@ sort: 1
 ---
 
 ## C++ 范例试运行
+### 例程
 &emsp;&emsp;下面我们尝试让电机转起来。
 首先打开src文件夹下的main.cpp文件，第一步要做的就是修改串口名。如果只在一个系统下运行，那么只修改这一系统下的串口名即可：
 ```
@@ -36,7 +37,7 @@ _ioPort.sendRecv(&cmd,&data);
 下面我们就可以给电机发送命令了，控制命令会通过_ioPort对象的sendRecv(&cmd,&data)函数给电机发送一次控制命令，并接收一次电机的当前状态信息。
 
 ```note
-此处需要特别注意的是，给电机发送的命令都是针对减速器之前的电机转子，即图5中的转轴1。而不是经过减速之后的输出轴2。所以在进行实际控制的过程中，一定要注意考虑电机的减速比。在GO-8010-6的电机中，减速比为`6.33`。
+此处需要特别注意的是，给电机发送的命令都是针对减速器之前的电机转子，即下图中的转轴1。而不是经过减速之后的输出轴2。所以在进行实际控制的过程中，一定要注意考虑电机的减速比。在GO-8010-6的电机中，减速比为`6.33`。
 ```
 
 <center>
@@ -48,3 +49,35 @@ color: #999;
 padding: 1px;">电机输出端</div>
 </center>
 <br>
+
+### 编译运行
+&emsp;&emsp;在了解例程后，下面让我们编译运行该例程。首先在终端将目录切换至unitree_actuator_sdk文件夹的根目录，如下图所示
+<center>
+<img src="../img/workPath.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">目录切换</div>
+</center>
+<br>
+然后依次输入下列四条指令，即每输入一次按一次回车键，让该条指令生效后再输入下一条。这四条指令的目的是编译上述例程源文件并将生成的可执行文件放置于build文件夹。
+
+```
+mkdir build
+cd build 
+cmake ..
+make
+```
+执行完所有步骤后，如果一切正常，使用`ls`命令即可查看到该目录下出现了显示为绿色的可执行文件，如下图所示
+<center>
+<img src="../img/runExample.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">生成的可执行文件与运行</div>
+</center>
+<br>
+
+以上图为例，在终端输入`sudo ./motorctrl`即可运行该例程。
